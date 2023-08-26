@@ -1,0 +1,146 @@
+
+html{
+    scroll-behavior: smooth;
+    font-size:1rem;
+
+}
+
+body {
+    font:"Poppins",sans-serif;
+    color: #666;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden
+}
+.hover-transition{
+    transition:all 300ms linear;
+}
+img{
+    width:100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.navb{
+    position:fixed;
+    right: 0;
+    left: 0;
+    top:0;
+    z-index:400;
+    box-shadow: 5px 5px 30px rgba(240, 238, 238, 0.6);
+    transition:all 500ms ease;
+}
+
+/* slider  */
+.img-slider{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-slider::before{
+    content: '';
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index:10;
+}
+/* slider */
+
+
+.mobile-nav{
+    transform:translateX(-15rem);
+    transition: all 300ms;
+    position: fixed;
+}
+.mobile-nav.active{
+    transform:translateX(0rem);
+}
+.services-col{
+    overflow: hidden !important;
+}
+.services-col img{
+    transition:all 300ms;
+}
+.services-col img:hover{
+    transform: scale(1.1);
+}
+
+
+/* featured  */
+.featured-col{
+    transition: all 500ms ease-in-out;
+    overflow: hidden;
+}
+#btn-overlay{
+    transform: translateY(4rem);
+}
+.featured-col:hover #btn-overlay{
+    transform: translateY(0rem);
+
+}
+
+/* team members */
+.team-members-col{
+    overflow: hidden !important;
+    position: relative;
+}
+.team-members-col img{
+    transition:all 300ms;
+    z-index: 100;
+}
+.team-members-col img:hover {
+    transform:scale(1.1);
+}
+.team-members-col{
+    position: relative;
+}
+.team-members-col .social-overlay{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    display: flex;
+    z-index: 300;
+    justify-content: center;
+    transform:translateX(-3rem);
+    transition: all 300ms;
+    width:3rem;
+}
+.team-members-col:hover .social-overlay {
+    transform:translateX(0rem);
+}
+/* team members */
+
+
+
+
+
+
+.projects-col{
+    overflow: hidden;
+}
+.project-overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX();
+    background:rgba(40, 39, 39, 0.65);
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    transition:all 400ms ease-in-out;
+    transform: scale(0);
+
+}
+.projects-col:hover .project-overlay{
+    transform: scale(1);
+}
