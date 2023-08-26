@@ -1,0 +1,2 @@
+# hostit
+# ecommerce-template
