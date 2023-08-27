@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome -->
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- googel font -->
+    <!-- Swipper JS Link -->
+
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Swipper JS Link -->
+    <!-- tailwindcss and daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwindcss and daisy ui -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        main: 'white',
+                        sColor: '#a6c76c',
+                        rColor: "#ff4646",
+                        light: '#F5F5F5',
+
+
+                    }
+
+                }
+            }
+        }
+    </script>
+    <style>
+        .sans-serif {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Ecommerce Template</title>
+</head>
+
+<body class="sans-serif bg-white">
+    <header>
+        <!-- Top bar -->
+        <div class = "bg-light">
+        <div class="container mx-auto px-4 md:px-8 lg:px-16 flex justify-between items-center">
+            <div>
+                <p class = 'text-sm  h-12 flex items-center '>Special collection already available. <a class ="hover:text-sColor hover-transition" href="">Read more</a></p>
+            </div>
+            <div>
+                <p><a href="signup.html">Sign Up</a>/ <a href="signin.html">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+        <div class="top-bar">
+            <div class="container mx-auto px-4 md:px-8 lg:px-16">
+                <div class="top-row flex py-5 items-center">
+                    <div class="top-col flex-[20%]">
+                        <a class = "text-4xl font-[600] text-black" href="/">Ecom.</a>
+                    </div>
+                    <div class="top-col flex-[60%]">
+                        <input class = "w-full outline-none py-3 px-5 border" type="text" placeholder="Search here">
+                    </div>
+                    <div class="top-col flex-[20%]">
+                        <div class="flex items-center justify-center gap-7"> 
+                            <div class = "flex items-center flex-col">
+                                <i class = "fa-solid fa-user text-2xl"></i>
+                                <small>Account</small>
+                            </div>
+                            <div class = "flex items-center flex-col relative">
+                                <i class="fa-regular fa-heart text-2xl"></i>
+                                <small class = "absolute text-white h-4 flex items-center justify-center top-0 bottom-0 right-1 w-4 bg-sColor rounded-full">3</small>
+                                <small>Wishlist</small>
+                            </div>
+                            <div class = "flex items-center flex-col relative">
+                                <i class="fa-solid fa-cart-shopping text-2xl"></i>
+                                <small class = "absolute text-white h-4 flex items-center justify-center top-0 -right-2 w-4 bg-sColor rounded-full">3</small>
+                                <small>Cart</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top bar -->
+        <!-- navbar -->
+        <div class="navb bg-white text-black lg-size lg:block hidden">
+            <div class="container mx-auto px-4 md:px-8 lg:px-16">
+                <nav class="flex justify-between items-center h-20">
+                    <div class="logo">
+                        <a class=" text-5xl font-[700] text-black" href="#"> Ecom.</a>
+                    </div>
+                    <ul class="flex gap-8">
+                        <li><a class="text-main" href="#">HOME</a></li>
+                        <li><a class="hover:text-main" href="#about">ABOUT</a></li>
+                        <li><a class="hover:text-main" href="#services">SERVICES</a></li>
+                        <li><a class="hover:text-main" href="#projects">PROJECTS</a></li>
+                        <li><a class="hover:text-main" href="#">PAGES</a></li>
+                        <li><a class="hover:text-main" href="#quotes">CONTACT</a></li>
+                        <li><a class=" text-black h-full p-5"><i class="ml-3 fa fa-phone mr-4"></i>01943385634</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- mobile  -->
+        <div class="navb text-white lg-size lg:hidden block">
+            <div class="container mx-auto px-4 md:px-8 lg:px-16">
+                <nav class="flex justify-between  h-20 items-center">
+                    <div class="logo">
+                        <a class=" text-5xl font-[700] text-black" href="#"> Ecom.</a>
+                    </div>
+                    <div>
+                        <ul
+                            class="absolute mobile-nav text-black left-0 gap-3 w-52 top-0 bg-white z-50 h-screen flex flex-col">
+                            <li class="ml-5 mt-5 mb-3"><a class="text-black text-5xl font-[700]" href="#"> Ecom.</a>
+                            </li>
+                            <li class="ml-5"><a href="#">HOME</a></li>
+                            <li class="ml-5"><a href="#about">ABOUT</a></li>
+                            <li class="ml-5"><a href="#services">SERVICES</a></li>
+                            <li class="ml-5"><a href="#projects">PROJECTS</a></li>
+                            <li class="ml-5"><a href="#">PAGES</a></li>
+                            <li class="ml-5"><a href="#quotes">CONTACT</a></li>
+                            <li><a class=" text-white h-full p-5"><i class="ml-3 fa fa-phone mr-4"></i>01943385634</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <i id="openMenu" class="fa-solid fa-bars text-2xl text-black"></i>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- mobile  -->
+        <!-- mobile  -->
+        <!-- navbar -->
+
+    </header>
+
+
+    <!-- main start -->
+    <main>
+        <div class="blog-classic">
+            <div class="container mx-auto px-4 md:px-8 lg:px-16">
+                <div class = "text-center p-7">
+                    <h2 class = "text-5xl text-black">Blog Classic</h2>
+                <p>blog</p>
+                </div>
+                <div class="blog-classic grid lg:grid-cols-4 md:grid-cols-2 gap-5">
+                 <div class="lg:col-span-3 flex flex-col gap-10">
+                <!-- col -->
+                <div class="our-blog-col ">
+                    <div class="flex flex-col">
+                        <img src="assets/images/blog/post-4.jpg" alt="image desc">
+                        <div class="flex flex-col py-4 gap-2">
+                            <p class="text-gray-300">by Jhon Doe | November 23, 2023| 3 Comments</p>
+                            <a href="">
+                                <h4 class="text-black hover-transition  font-[500] text-2xl hover:text-sColor">
+                                    Sed adipiscing ornare.</h4>
+                            </a>
+                            <p>in Lifestyle, Shopping</p>
+                            <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, uctus metus libero eu augue.</p>
+                            <a href="" class="hover:text-sColor hover-transition  hover:underline">Continue
+                                Reading</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="our-blog-col ">
+                    <div class="flex flex-col">
+                        <img src="assets/images/blog/post-4.jpg" alt="image desc">
+                        <div class="flex flex-col py-4 gap-2">
+                            <p class="text-gray-300">by Jhon Doe | November 23, 2023| 3 Comments</p>
+                            <a href="">
+                                <h4 class="text-black hover-transition  font-[500] text-2xl hover:text-sColor">
+                                    Sed adipiscing ornare.</h4>
+                            </a>
+                            <p>in Lifestyle, Shopping</p>
+                            <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, uctus metus libero eu augue.</p>
+                            <a href="" class="hover:text-sColor hover-transition  hover:underline">Continue
+                                Reading</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="our-blog-col ">
+                    <div class="flex flex-col">
+                        <img src="assets/images/blog/post-4.jpg" alt="image desc">
+                        <div class="flex flex-col py-4 gap-2">
+                            <p class="text-gray-300">by Jhon Doe | November 23, 2023| 3 Comments</p>
+                            <a href="">
+                                <h4 class="text-black hover-transition  font-[500] text-2xl hover:text-sColor">
+                                    Sed adipiscing ornare.</h4>
+                            </a>
+                            <p>in Lifestyle, Shopping</p>
+                            <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, uctus metus libero eu augue.</p>
+                            <a href="" class="hover:text-sColor hover-transition  hover:underline">Continue
+                                Reading</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="our-blog-col ">
+                    <div class="flex flex-col">
+                        <img src="assets/images/blog/post-4.jpg" alt="image desc">
+                        <div class="flex flex-col py-4 gap-2">
+                            <p class="text-gray-300">by Jhon Doe | November 23, 2023| 3 Comments</p>
+                            <a href="">
+                                <h4 class="text-black hover-transition  font-[500] text-2xl hover:text-sColor">
+                                    Sed adipiscing ornare.</h4>
+                            </a>
+                            <p>in Lifestyle, Shopping</p>
+                            <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, uctus metus libero eu augue.</p>
+                            <a href="" class="hover:text-sColor hover-transition  hover:underline">Continue
+                                Reading</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <ul class="flex items-center gap-2">
+                        <li>pre</li>
+                        <li class="bg-light p-3">1</li>
+                        <li class="bg-light p-3">2</li>
+                        <li class="bg-light p-3">3</li>
+                        <li>next</li>
+                    </ul>
+                </div>
+            </div>
+                <!-- ------ -->
+                <div class = "md:col-span-1">
+                    <div class="flex flex-col gap-10">
+                        <div class="post-search">
+                            <h4 class = "text-xl text-black font-[500] mb-4">Search</h4>
+                           <input type="text" class="py-2 px-4 w-full border outline-sColor" name="" id="" placeholder="Search in blog" >
+                           </div>
+                           <div class = "post-categories flex flex-col gap-3">
+                               <h4 class = "text-xl text-black font-[500] mb-2">Catgories</h4>
+                               <div class="flex justify-between">
+                                   <p>Lifestyle</p>
+                                   <p>1</p>
+                               </div>
+                               <div class="flex justify-between">
+                                   <p>Shopping</p>
+                                   <p>4</p>
+                               </div>
+                               <div class="flex justify-between">
+                                   <p>Fashion</p>
+                                   <p>3</p>
+                               </div>
+                               <div class="flex justify-between">
+                                   <p>Travel</p>
+                                   <p>8</p>
+                               </div>
+                               <div class="flex justify-between">
+                                   <p>Hobbies</p>
+                                   <p>7</p>
+                               </div>
+                           </div>
+                           <div class="popular-posts">
+                               <h4 class = "text-xl text-black font-[500] mb-6">Recent post</h4>
+                               <div class="flex flex-col gap-5">
+                                   <div class="flex gap-4 items-center">
+                                       <div >
+                                           <a href=""><img src="assets/images/blog/sidebar/post-1.jpg" alt="post"></a>
+                                       </div>
+                                       <div>
+                                           <p class="text-gray-300"> November 23, 2023</p>
+                                           <p>Aliquam tincidunt mauris eurisus.</p>
+                                       </div>
+                                   </div>
+                                   <div class="flex gap-4 items-center">
+                                       <div >
+                                           <a href=""><img src="assets/images/blog/sidebar/post-2.jpg" alt="post"></a>
+                                       </div>
+                                       <div>
+                                           <p class="text-gray-300"> November 26, 2023</p>
+                                           <p>Aliquam tincidunt mauris eurisus.</p>
+                                       </div>
+                                   </div>
+                                   <div class="flex gap-4 items-center">
+                                       <div >
+                                           <a href=""><img src="assets/images/blog/sidebar/post-3.jpg" alt="post"></a>
+                                       </div>
+                                       <div>
+                                           <p class="text-gray-300"> November 22, 2023</p>
+                                           <p>Aliquam tincidunt mauris eurisus.</p>
+                                       </div>
+                                   </div>
+                                   <div class="flex gap-4 items-center">
+                                       <div >
+                                           <a href=""><img src="assets/images/blog/sidebar/post-4.jpg" alt="post"></a>
+                                       </div>
+                                       <div>
+                                           <p class="text-gray-300"> November 26, 2023</p>
+                                           <p>Aliquam tincidunt mauris eurisus.</p>
+                                       </div>
+                                   </div>
+                              
+                               </div>
+                           </div>
+                           <div class="browse-tags ">
+                               <h4 class = "text-xl text-black font-[500] mb-6">Browse Tags</h4>
+                              <div class="flex gap-4 flex-wrap">
+                               <span class="bg-light border p-2">fashion</span><span class="bg-light border p-2">shoping</span>
+                               <span class="bg-light p-2 border">style</span><span class="bg-light p-2 border">hobbies</span>
+                               <span class="bg-light p-2 border">women</span><span class="bg-light p-2 border">fashion</span>
+                               <span class="bg-light p-2 border">photography</span>
+                               <span class="bg-light p-2 border">travel</span>
+                              </div>
+                           </div>
+                           <div class="about-blogs ">
+                               <h4 class = "text-xl text-black font-[500] mb-6">About Blog</h4>
+                              <div >
+                                   <p>Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, pulvinar nunc sapien ornare nisl.</p>
+                              </div>
+                           </div>
+                    </div>
+                </div>
+                <!-- col -->
+               </div>
+            </div>
+        </div>
+        <hr class="mt-10 container mx-auto px-4 md:px-8 lg:px-16">
+    </main>
+    <!-- main section -->
+    <!-- footer section -->
+    <footer>
+        <div class="footer bg-white">
+            <div class="container mx-auto px-4 md:px-8 lg:px-16">
+                <!-- footer row -->
+                <div class="footer-row grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 pt-16">
+                    <!-- footer col -->
+                    <div class="footer-col">
+                        <ul class="flex flex-col gap-y-8">
+                            <h2 class="text-2xl font-[600]">Ecom.</h2>
+                            <div class="flex flex-col gap-7">
+                                <p>Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, eu vulputate
+                                    magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan
+                                    porttitor, facilisis luctus, metus.</p>
+                                <div>
+                                    <p>Got Question? Call us 24/7</p>
+                                    <p class="text-sColor text-2xl font-[600]">01943 959 264</p>
+                                </div>
+                            </div>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="footer-col">
+                        <ul class="flex flex-col gap-7">
+                            <h2 class="text-lg font-[600]"> Information</h2>
+                            <div class="flex flex-col gap-3 ">
+                                <li> <a class="hover:text-sColor hover-transition" href="#">About Molla</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">FAQ</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">How to shop on Molla</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">Contact us</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">Log in</a></li>
+
+
+                            </div>
+
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <ul class="flex flex-col gap-7">
+                            <h2 class="text-lg font-[600]"> Customer Service
+                            </h2>
+                            <div class="flex flex-col gap-3 ">
+                                <li> <a class="hover:text-sColor hover-transition" href="#">Payment Methods</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">Money-back guarantee!</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">How to shop on Molla</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">Returns</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">Shiping</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">Terms and conditions</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">Privacy Policy
+                                </a></li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <ul class="flex flex-col gap-7">
+                            <h2 class="text-lg font-[600]"> My Account
+                            </h2>
+                            <div class="flex flex-col gap-3 ">
+                                <li> <a class="hover:text-sColor hover-transition" href="#">Sign In</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">View Cart</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">My Wishlist</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">Track My Order</a></li>
+                                <li> <a class="hover:text-sColor hover-transition" href="#">Help</a></li>
+                           
+                           
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- footer col -->
+                </div>
+                <!-- footer row -->
+                <hr class=" w-full mt-3 bg-white">
+                <div class = 'h-12 flex items-center justify-center'>
+                    <p class="  flex items-center justify-center">Copyright &copy Rafi,All Right Reserved. Terms Of Use
+                       | Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section -->
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- swipper js link  -->
+    <!-- swipper js link  -->
+</body>
+
+</html>
