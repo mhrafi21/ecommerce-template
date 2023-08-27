@@ -14,18 +14,19 @@ body {
     transition: all 300ms linear;
 }
 img {
+    height: 100%;
     width: 100%;
     object-fit: cover;
-    height: 100%;
 }
 .navb {
-    position: fixed;
+    position: sticky;
     right: 0;
     left: 0;
     top: 0;
     z-index: 400;
     box-shadow: 5px 5px 30px rgba(240, 238, 238, 0.6);
     transition: all 500ms ease;
+    background-color: white;
 }
 /* slider  */
 .img-slider {
